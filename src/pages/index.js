@@ -6,17 +6,18 @@ import Header from "../sections/header";
 
 const IndexPage = () => (
   <Default>
-    <SEO />
-    <Header title='Classes and Events'
+    <SEO title="ESL Classes" />
+    <Header title="ESL Classes and More"
       subtitle={<>
         <span className="inline-block">Welcome all Beginner and&nbsp;</span>
         <span className="inline-block">Intermediate Students</span></>}
     />
     <div className="container mx-auto sm:w-8/12 py-16">
-      <p className="text-lg sm:text-xl sm:w-10/12 mx-auto text-gray-800 pb-16">
-        We are currently hosting the following classes via Zoom Online Meetings. Please email&nbsp;
+      <p className="text-center text-lg sm:text-xl mx-auto text-gray-800 pb-16">
+        <span className="inline-block">We are currently hosting the following classes via Zoom Online Meetings.</span>
+        <span className="inline-block">Please email&nbsp;
         <a href="mailto:esl@foothillsalliance.com" className="underline text-blue-600">esl@foothillsalliance.com</a>
-        &nbsp;to be added to the invitation emails.
+        &nbsp;to be added to the invitation emails.</span>
       </p>
 
       <h1 className="text-center text-3xl font-bold pb-8">Classes</h1>
@@ -33,47 +34,47 @@ const IndexPage = () => (
         </thead>
         <tbody>
           <tr className="bg-gray-200">
-            <td className="px-4 py-6">Tue, 9:30 – 11:30 am</td>
+            <td className="px-4 py-6"><i>Tue, 9:30 – 11:30 am</i><br></br>Fifteen weeks</td>
             <td className="px-4 py-6">ESL Book Study</td>
             <td className="px-4 py-6">Starting "Florence Nightingale" soon!</td>
           </tr>
           <tr>
-            <td className="px-4 py-6">Thur, 7:00 – 8:15 pm</td>
+            <td className="px-4 py-6"><i>Thur, 7:00 – 8:15 pm</i></td>
             <td className="px-4 py-6">ESL Conversation Class</td>
-            <td className="px-4 py-6">15 weeks<br></br>Canadian provinces & territories</td>
+            <td className="px-4 py-6">Canadian provinces & territories</td>
           </tr>
           <tr className="bg-gray-200">
             <td className="px-4 py-6">Upcoming Saturdays</td>
             <td className="px-4 py-6">ESL for Gardening</td>
-            <td className="px-4 py-6">Dates to be announced</td>
+            <td className="px-4 py-6">Learn about gardening!</td>
           </tr>
           <tr>
-            <td className="px-4 py-6">Sat, 5:00 – 6:15 pm</td>
+            <td className="px-4 py-6"><i>Sat, 5:00 – 6:15 pm</i><br></br>June 6 to July 11</td>
             <td className="px-4 py-6">ESL for Weddings</td>
-            <td className="px-4 py-6">Six Saturdays from June 6 to July 11</td>
+            <td className="px-4 py-6">Learn about steps in the wedding process!</td>
           </tr>
           <tr className="bg-gray-200">
-            <td className="px-4 py-6">Sat, 6:30 – 8:00 pm</td>
+            <td className="px-4 py-6"><i>Sat, 6:30 – 8:00 pm</i></td>
             <td className="px-4 py-6">Bridges Plus Bible Study</td>
-            <td className="px-4 py-6">Groups for Beginner and Intermediate</td>
+            <td className="px-4 py-6">Groups for beginner and intermediate students</td>
           </tr>
           <tr>
-            <td className="px-4 py-6">Sun, 9:00 – 10:30 am</td>
+            <td className="px-4 py-6"><i>Sun, 9:00 – 10:30 am</i><br></br>May 11 to June 7</td>
             <td className="px-4 py-6">JOBTALK</td>
-            <td className="px-4 py-6">May 11 to June 7<br></br>Interviews, resumes, networking</td>
+            <td className="px-4 py-6">Interviews, resumes, networking</td>
           </tr>
           <tr className="bg-gray-200">
-            <td className="px-4 py-6">Sun, 9:20 – 10:30 am</td>
+            <td className="px-4 py-6"><i>Sun, 9:20 – 10:30 am</i><br></br>Starting June 21</td>
             <td className="px-4 py-6">Public Speaking</td>
-            <td className="px-4 py-6">Starting June 21<br></br>Learn to speak with more confidence!</td>
+            <td className="px-4 py-6">Learn to speak with more confidence!</td>
           </tr>
           <tr>
-            <td className="px-4 py-6">Sun, 11:00 am – 12:15 pm</td>
+            <td className="px-4 py-6"><i>Sun, 11:00 am – 12:15 pm</i></td>
             <td className="px-4 py-6">Bridges Beginner Class</td>
             <td className="px-4 py-6">Canadian culture, ESL, life of Jesus</td>
           </tr>
           <tr className="bg-gray-200">
-            <td className="px-4 py-6">Sun, 11:00 am – 12:15 pm</td>
+            <td className="px-4 py-6"><i>Sun, 11:00 am – 12:15 pm</i></td>
             <td className="px-4 py-6">Bridges Intermediate Class</td>
             <td className="px-4 py-6">Canadian culture, ESL, life of Jesus</td>
           </tr>
@@ -94,27 +95,27 @@ const IndexPage = () => (
         </thead>
         <tbody>
           <tr className="bg-gray-200">
-            <td className="px-4 py-6">Sun, May 10, 2 pm</td>
+            <td className="px-4 py-6"><i>Sun, May 10, 2 pm</i></td>
             <td className="px-4 py-6">Online Talent Show</td>
             <td className="px-4 py-6">Everyone is welcome!</td>
           </tr>
           <tr>
-            <td className="px-4 py-6">Sun, June 7, 2 pm</td>
+            <td className="px-4 py-6"><i>Sun, June 7, 2 pm</i></td>
             <td className="px-4 py-6">Online Scavenger Hunt</td>
             <td className="px-4 py-6">Everyone is welcome!</td>
           </tr>
           <tr className="bg-gray-200">
-            <td className="px-4 py-6">Sun, June 28, 2 pm</td>
+            <td className="px-4 py-6"><i>Sun, June 28, 2 pm</i></td>
             <td className="px-4 py-6">Online Canada Party</td>
             <td className="px-4 py-6">Everyone is welcome!</td>
           </tr>
           <tr>
-            <td className="px-4 py-6">Sun, July ?</td>
+            <td className="px-4 py-6"><i>Sun, July ?</i></td>
             <td className="px-4 py-6">To be announced</td>
             <td className="px-4 py-6">Sign up to be notified!</td>
           </tr>
           <tr className="bg-gray-200">
-            <td className="px-4 py-6">Sun, Aug ?</td>
+            <td className="px-4 py-6"><i>Sun, Aug ?</i></td>
             <td className="px-4 py-6">To be announced</td>
             <td className="px-4 py-6">Sign up to be notified!</td>
           </tr>
