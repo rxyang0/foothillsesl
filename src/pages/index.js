@@ -16,7 +16,7 @@ const IndexPage = () => (
       <p className="text-center text-lg sm:text-xl mx-auto text-gray-800 pb-16">
         <span className="inline-block">We are currently hosting the following classes via Zoom Online Meetings.</span>
         <span className="inline-block">Please email&nbsp;
-        <a href="mailto:esl@foothillsalliance.com" className="underline text-blue-600">esl@foothillsalliance.com</a>
+        <a href="mailto:esl@foothillsalliance.com" className="underline text-blue-dark">esl@foothillsalliance.com</a>
         &nbsp;to be added to the invitation emails.</span>
       </p>
 
