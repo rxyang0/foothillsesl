@@ -54,7 +54,13 @@ const IndexPage = () => (
             <td className="px-4 py-6">Learn about steps in the wedding process!</td>
           </tr>
           <tr className="bg-gray-200">
-            <td className="px-4 py-6"><i>Sat, 6:30 – 8:00 pm</i></td>
+            <td className="px-4 py-6">
+              <i>Sat, 6:30 – 8:00 pm</i>
+              <strong>
+                <span className="inline-block">No class on&nbsp;</span>
+                <span className="inline-block">July 18th</span>
+              </strong>
+            </td>
             <td className="px-4 py-6">Bridges Plus Bible Study</td>
             <td className="px-4 py-6">Groups for beginner and intermediate students</td>
           </tr>
@@ -64,8 +70,12 @@ const IndexPage = () => (
             <td className="px-4 py-6">Interviews, resumes, networking</td>
           </tr>
           <tr className="bg-gray-200">
-            <td className="px-4 py-6"><i>Sun, 9:20 – 10:30 am</i><br></br>Starting June 21</td>
-            <td className="px-4 py-6">Public Speaking</td>
+            <td className="px-4 py-6">
+              <i>Sun, 9:20 – 10:30 am</i><br></br>
+              <span className="inline-block">Four weeks ending&nbsp;</span>
+              <span className="inline-block">July 12th</span>
+            </td>
+            <td className="px-4 py-6">Project Confidence<br></br>Public Speaking</td>
             <td className="px-4 py-6">Learn to speak with more confidence!</td>
           </tr>
           <tr>
@@ -110,9 +120,9 @@ const IndexPage = () => (
             <td className="px-4 py-6">Everyone is welcome!</td>
           </tr>
           <tr>
-            <td className="px-4 py-6"><i>Sun, July ?</i></td>
-            <td className="px-4 py-6">To be announced</td>
-            <td className="px-4 py-6">Sign up to be notified!</td>
+            <td className="px-4 py-6"><i>Sun, July 26</i><br></br>Tentative</td>
+            <td className="px-4 py-6">Socially-distanced walk at Nose Hill Park</td>
+            <td className="px-4 py-6">More details to come via email</td>
           </tr>
           <tr className="bg-gray-200">
             <td className="px-4 py-6"><i>Sun, Aug ?</i></td>
