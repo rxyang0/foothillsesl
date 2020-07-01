@@ -24,9 +24,9 @@ const IndexPage = () => (
       <table className="w-full table-fixed text-center text-md sm:text-lg shadow-lg">
         <thead>
           <tr>
-            <th className="w-1/3 pb-4 font-medium">Date</th>
-            <th className="w-1/3 pb-4 font-medium">Class</th>
-            <th className="w-1/3 pb-4 font-medium">Description</th>
+            <th className="w-1/3 py-2 font-medium">Date</th>
+            <th className="w-1/3 py-2 font-medium">Class</th>
+            <th className="w-1/3 py-2 font-medium">Description</th>
           </tr>
           <tr>
             <td colSpan="100%"><hr></hr></td>
@@ -95,9 +95,9 @@ const IndexPage = () => (
       <table className="w-full table-fixed text-center text-md sm:text-lg shadow-lg">
         <thead>
           <tr>
-            <th className="w-1/3 pb-4 font-medium">Date</th>
-            <th className="w-1/3 pb-4 font-medium">Event</th>
-            <th className="w-1/3 pb-4 font-medium">Description</th>
+            <th className="w-1/3 py-2 font-medium">Date</th>
+            <th className="w-1/3 py-2 font-medium">Event</th>
+            <th className="w-1/3 py-2 font-medium">Description</th>
           </tr>
           <tr>
             <td colSpan="100%"><hr></hr></td>
