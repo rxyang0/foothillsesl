@@ -112,17 +112,24 @@ const IndexPage = () => (
           <tr>
             <td className="px-4 py-6"><i>Sun, June 7, 2 pm</i></td>
             <td className="px-4 py-6">Online Scavenger Hunt</td>
-            <td className="px-4 py-6">Everyone is welcome!</td>
+            <td className="px-4 py-6">Search your home for uncommon items to earn points!</td>
           </tr>
           <tr className="bg-gray-200">
             <td className="px-4 py-6"><i>Sun, June 28, 2 pm</i></td>
             <td className="px-4 py-6">Online Canada Party</td>
-            <td className="px-4 py-6">Everyone is welcome!</td>
+            <td className="px-4 py-6">Celebrate Canada Day with a fun quiz and videos</td>
           </tr>
           <tr>
-            <td className="px-4 py-6"><i>Sun, July 26</i><br></br>Tentative</td>
+            <td className="px-4 py-6"><i>Sun, July 26, 2 pm</i></td>
             <td className="px-4 py-6">Socially-distanced walk at Nose Hill Park</td>
-            <td className="px-4 py-6">More details to come via email</td>
+            <td className="px-4 py-6 break-words">
+              Meet at&nbsp;
+              <a href="https://www.google.com/maps/place/Nose+Hill+Parking+Lot,+Calgary,+AB/"
+                className="underline text-blue-dark"
+              >
+                Shaganappi Trail parking lot
+              </a>
+            </td>
           </tr>
           <tr className="bg-gray-200">
             <td className="px-4 py-6"><i>Sun, Aug ?</i></td>
