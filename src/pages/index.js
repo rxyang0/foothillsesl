@@ -130,20 +130,26 @@ const IndexPage = () => (
             </tr>
             <tr>
               <td className="px-4 py-6"><i>Sun, July&nbsp;26, 2&nbsp;pm</i></td>
-              <td className="px-4 py-6">Socially-distanced walk at Nose Hill Park</td>
+              <td className="px-4 py-6">
+                Socially-distanced walk at Nose Hill Park
+                <br /><strong>Masks will be worn</strong>
+              </td>
               <td className="px-4 py-6">
                 Meet at{' '}
-                <a href="https://www.google.com/maps/place/Nose+Hill+Parking+Lot,+Calgary,+AB/"
-                  className="underline text-blue-dark"
-                >
-                  Edgemont parking lot on Shaganappi Trail
-                </a>.
+                <a href="https://www.google.com/maps/place/Nose+Hill+Parking+Lot,+Calgary,+AB/" target="_blank"
+                   rel="noreferrer" className="underline text-blue-dark"
+                >Edgemont parking lot on Shaganappi Trail</a>
                 <br />Return to parking lot at <i>3&nbsp;pm</i>
               </td>
             </tr>
             <tr className="bg-gray-200">
-              <td className="px-4 py-6"><i>Sun, Aug&nbsp;?</i></td>
-              <td className="px-4 py-6">To be announced</td>
+              <td className="px-4 py-6"><i>Sun, Aug&nbsp;12 or&nbsp;23</i></td>
+              <td className="px-4 py-6">
+                Socially-distanced tour of{' '}
+                <a href="https://www.saskaberryranch.com/" target="_blank" rel="noreferrer"
+                  className="underline text-blue-dark">The Saskaberry Ranch</a>
+                <br /><strong>Masks will be worn</strong>
+              </td>
               <td className="px-4 py-6">Sign up to be notified!</td>
             </tr>
           </tbody>
