@@ -7,7 +7,7 @@ const Footer = () => (
         <span className="inline-block">Copyright ⓒ&nbsp;</span>
         <span className="inline-block">Foothills Alliance Church 2020</span></p>
       <p className="text-center text-white">
-        Built with <span role="img" aria-label="love">❤️</span> by&nbsp;
+        Built with<span role="img" aria-label="love"> ❤️ </span>&nbsp;by{' '}
         <a href="https://rxyang.ca" target="_blank" rel="noreferrer" className="underline">Richard Yang</a>
       </p>
     </div>
