@@ -4,10 +4,14 @@ const Footer = () => (
   <footer className="flex items-center justify-center bg-blue-dark py-6">
     <div className="container">
       <p className="text-center text-white">
-        <span className="inline-block">Copyright ⓒ&nbsp;</span>
-        <span className="inline-block">Foothills Alliance Church 2020</span></p>
+        ⓒ{' '}
+        <a href="https://www.foothillsalliance.com/" target="_blank" rel="noreferrer" className="underline">
+          Foothills Alliance Church
+        </a>
+        {' '}2020
+      </p>
       <p className="text-center text-white">
-        Built with<span role="img" aria-label="love"> ❤️ </span>&nbsp;by{' '}
+        Built with<span role="img" aria-label="love"> ❤️ </span>by{' '}
         <a href="https://rxyang.ca" target="_blank" rel="noreferrer" className="underline">Richard Yang</a>
       </p>
     </div>
