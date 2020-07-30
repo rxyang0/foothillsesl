@@ -20,7 +20,7 @@
     <i>Sun, July&nbsp;26, 2&nbsp;pm</i>
   title:
     Socially-distanced walk at Nose Hill Park<br />
-    <strong>Face coverings will be worn</strong>
+    <span class="font-semibold">Face coverings will be worn</span>
   description:
     Meet at
     <a href="https://www.google.com/maps/place/Nose+Hill+Parking+Lot,+Calgary,+AB/" target="_blank" rel="noreferrer"
@@ -35,6 +35,6 @@
     <a href="https://www.saskaberryranch.com/" target="_blank" rel="noreferrer" class="underline text-blue-dark">
       The Saskaberry Ranch
     </a><br />
-    <strong>Face coverings will be worn</strong>
+    <span class="font-semibold">Face coverings will be worn</span>
   description:
     Sign up to be notified!

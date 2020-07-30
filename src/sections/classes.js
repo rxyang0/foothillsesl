@@ -4,13 +4,13 @@ import ClassesData from "../../content/classes.yaml";
 
 const Classes = () => (
   <section className="text-center text-sm">
-    <h1 className="text-3xl font-bold pb-8">Classes</h1>
+    <h1 className="text-3xl font-semibold pb-8">Classes</h1>
     <table className="w-full table-fixed sm:text-lg shadow-lg">
       <thead>
         <tr>
-          <th className="w-1/3 py-2 font-medium">Date</th>
-          <th className="w-1/3 py-2 font-medium">Class</th>
-          <th className="w-1/3 py-2 font-medium">Description</th>
+          <th className="w-1/3 py-2 font-hairline">Date</th>
+          <th className="w-1/3 py-2 font-hairline">Class</th>
+          <th className="w-1/3 py-2 font-hairline">Description</th>
         </tr>
         <tr>
           <td colSpan="100%"><hr /></td>
