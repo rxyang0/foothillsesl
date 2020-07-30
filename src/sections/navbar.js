@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const Navbar = () => (
-  <nav className="sticky top-0 flex justify-center bg-blue-light py-2 sm:py-4">
-    <div className="container text-center text-white font-bold text-2xl sm:text-3xl">
-      <Link to="/">
-        <span className="inline-block">Foothills Alliance Church&nbsp;</span>
-        <span className="inline-block">Intercultural Ministries</span>
-      </Link>
-    </div>
+import styles from "./navbar.module.css";
+import logo from "../assets/FAC-IM-logo-white-100w.png";
+
+export default () => (
+  <nav className={styles.nav}>
+    <Link to="/">
+      <img src={logo} className={styles.navLogo} alt="Foothills Intercultural Ministries Logo" />
+    </Link>
   </nav>
 );
-
-export default Navbar;
