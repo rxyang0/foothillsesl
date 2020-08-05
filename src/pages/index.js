@@ -9,7 +9,7 @@ import EventsSection from "../sections/events";
 const IndexPage = () => (
   <Default>
     <SEO title="ESL Classes" />
-    <Header title="ESL Classes and More" subtitle="Welcome All Beginner and Intermediate&nbsp;Students" />
+    <Header title="ESL Classes and More" subtitle="Welcome all beginner, intermediate, and advanced students!" />
     <div className="container mx-auto py-16">
       <p className="text-center text-lg sm:text-xl mx-auto text-gray-800 pb-16">
         <span className="inline-block">
