@@ -1,41 +1,42 @@
-- date:
-    <i>Sun, May&nbsp;10, 2:00&nbsp;pm</i>
-  title:
-    Online Talent Show
+- title:
+    Socially-distanced tour of
+    <a href="https://www.saskaberryranch.com/" target="_blank" rel="noreferrer">The Saskaberry Ranch</a>
+  date:
+    Sunday, August 16, 2:00–4:00 pm<br />
+    Depart Calgary at around 1:00 pm to arrive on time
   description:
-    Everyone is welcome!
-- date:
-    <i>Sun, June&nbsp;7, 2:00&nbsp;pm</i>
-  title:
-    Online Scavenger Hunt
+    Face coverings will be worn<br />
+    A map will be sent via email
+
+- title:
+    Socially-distanced walk at Nose Hill Park
+  date:
+    Sunday, July 26, 2:00 pm<br />
+    Return to parking lot at 3:00 pm
   description:
-    Search your home for uncommon items to earn points!
-- date:
-    <i>Sun, June&nbsp;28, 2:00&nbsp;pm</i>
-  title:
+    Face coverings will be worn<br />
+    Meet at
+    <a href="https://www.google.com/maps/place/Nose+Hill+Parking+Lot,+Calgary,+AB/" target="_blank" rel="noreferrer">
+      Edgemont parking lot on Shaganappi Trail
+    </a>
+
+- title:
     Online Canada Party
+  date:
+    Sunday, June 28, 2:00 pm
   description:
     Celebrate Canada Day with a fun quiz and videos
-- date:
-    <i>Sun, July&nbsp;26, 2:00&nbsp;pm</i>
-  title:
-    Socially-distanced walk at Nose Hill Park<br />
-    <span class="font-semibold">Face coverings will be worn</span>
+
+- title:
+    Online Scavenger Hunt
+  date:
+    Sunday, June 7, 2:00 pm
   description:
-    Meet at
-    <a href="https://www.google.com/maps/place/Nose+Hill+Parking+Lot,+Calgary,+AB/" target="_blank" rel="noreferrer"
-        class="underline text-blue-dark">
-      Edgemont parking lot on Shaganappi Trail
-    </a><br />
-    Return to parking lot at <i>3:00&nbsp;pm</i>
-- date:
-    <i>Sun, August&nbsp;16, 2:00–4:00&nbsp;pm</i>
-  title:
-    Socially-distanced tour of
-    <a href="https://www.saskaberryranch.com/" target="_blank" rel="noreferrer" class="underline text-blue-dark">
-      The Saskaberry Ranch
-    </a><br />
-    <span class="font-semibold">Face coverings will be worn</span>
+    Search your home for uncommon items to earn points!
+
+- title:
+    Online Talent Show
+  date:
+    Sunday, May 10, 2:00 pm
   description:
-    Depart Calgary at around <i>1:00&nbsp;pm</i> to arrive on time<br />
-    <span class="font-semibold">A map will be sent via email</span>
+    Everyone is welcome!
