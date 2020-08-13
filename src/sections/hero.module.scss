@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 500px;
+  box-shadow: $shadow-md;
+  background-color: #edf2f7;
+  color: #000;
+}
+
+.title {
+  font-size: 1.5rem;
+  @media (min-width: $screen-sm) {
+    font-size: 3rem;
+  }
+  font-weight: $font-semibold;
+  padding-bottom: 1rem; 
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  @media (min-width: $screen-sm) {
+    font-size: 1.5rem;
+  }
+  font-weight: $font-regular;
+}
