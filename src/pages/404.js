@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import Default from "../layouts/default";
-import SEO from "../sections/seo";
+import styles from './404.module.scss';
+import Default from '../layouts/default';
+import SEO from '../components/seo';
 
-const NotFoundPage = () => (
+
+export default () => (
   <Default>
-    <SEO title="404 Not found" />
-    <div className="container mt-48">
-      <h1 className="text-center text-6xl font-bold">404</h1>
-      <h2 className="text-center text-3xl">Not Found</h2>
+    <SEO title="404 Not Found" />
+    <div className={styles.container}>
+      <h1 className={styles.title}>404</h1>
+      <h2 className={styles.subtitle}>Not Found</h2>
     </div>
   </Default>
 );
-
-export default NotFoundPage;
