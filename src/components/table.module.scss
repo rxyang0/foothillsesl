@@ -1,0 +1,38 @@
+.section-table {
+  padding-bottom: 4rem;
+}
+
+.title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: $font-semibold;
+  padding-bottom: 2rem;
+}
+
+.table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.875rem;
+  @media (min-width: $screen-sm) {
+    font-size: 1.125rem;
+  }
+  line-height: 1.5;
+  box-shadow: $shadow-lg;
+  th {
+    width: 33.333333%;
+    padding: 0.5rem 0;
+    font-weight: $font-thin;
+  }
+  hr {
+    border: 0 solid #e2e8f0;
+    border-top-width: 1px;
+  }
+  .cell {
+    padding: 1.5rem 1rem;
+  }
+  .alt-row {
+    background-color: #edf2f7;
+  }
+}
