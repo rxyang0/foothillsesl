@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import 'normalize.css';
 import '../styles/global.scss';
-import favicon from '../assets/favicon-192.png';
+import favicon from '../../content/assets/favicon-192.png';
 import Navbar from '../sections/navbar';
 import Footer from '../sections/footer';
 
