@@ -1,21 +1,19 @@
-import React from "react";
+import React from 'react';
 
-const Footer = () => (
-  <footer className="flex items-center justify-center bg-blue-dark py-6">
+import styles from './footer.module.scss';
+
+export default () => (
+  <footer className={styles.footer}>
     <div className="container">
-      <p className="text-center text-white">
+      <p>
         ⓒ{' '}
-        <a href="https://www.foothillsalliance.com/" target="_blank" rel="noreferrer" className="underline">
-          Foothills Alliance Church
-        </a>
+        <a href="https://www.foothillsalliance.com/" target="_blank" rel="noreferrer">Foothills Alliance Church</a>
         {' '}2020
       </p>
-      <p className="text-center text-white">
+      <p>
         Built with<span role="img" aria-label="love"> ❤️ </span>by{' '}
-        <a href="https://rxyang.ca" target="_blank" rel="noreferrer" className="underline">Richard Yang</a>
+        <a href="https://rxyang.ca" target="_blank" rel="noreferrer">Richard Yang</a>
       </p>
     </div>
   </footer>
 );
-
-export default Footer;

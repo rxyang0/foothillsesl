@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 10vh;
+  background-color: $color-blue-dark;
+  color: #fff;
+  line-height: 1.5;
+  a {
+    color: #fff;
+  }
+}
