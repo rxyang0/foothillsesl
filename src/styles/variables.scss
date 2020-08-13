@@ -1,0 +1,20 @@
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap");
+
+$fonts: "Poppins", sans-serif;
+$font-thin: 100;
+$font-regular: 400;
+$font-semibold: 600;
+$font-black: 900;
+
+$color-background: #fff;
+$color-blue-light: #27aae1;
+$color-blue-dark: #0e486c;
+
+$shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 6px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px 0 rgba(0, 0, 0, 0.1), 0 4px 6px 0 rgba(0, 0, 0, 0.05);

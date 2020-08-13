@@ -1,0 +1,39 @@
+@import "reset";
+
+body {
+  background-color: $color-blue-light;
+  font-family: $fonts;
+  animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+a {
+  color: $color-blue-dark;
+}
+
+.container {
+  padding: 0 1rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: $screen-sm) {
+    max-width: $screen-sm;
+  }
+  @media (min-width: $screen-md) {
+    max-width: $screen-md;
+  }
+  @media (min-width: $screen-lg) {
+    max-width: $screen-lg;
+  }
+  @media (min-width: $screen-xl) {
+    max-width: $screen-xl;
+  }
+}
