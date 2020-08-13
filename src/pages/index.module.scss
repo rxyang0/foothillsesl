@@ -1,0 +1,9 @@
+.message {
+  padding: 4rem 0;
+  text-align: center;
+  font-size: 1.125rem;
+  @media (min-width: $screen-sm) {
+    font-size: 1.25rem;
+  }
+  line-height: 1.5;
+}
