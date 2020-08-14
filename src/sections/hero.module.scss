@@ -3,25 +3,56 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 500px;
+  height: 60vh;
   box-shadow: $shadow-md;
-  background-color: #edf2f7;
-  color: #000;
+  overflow: hidden;
+  color: #fff;
+}
+
+.header-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all 0.5s ease-out;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   @media (min-width: $screen-sm) {
     font-size: 3rem;
   }
+  @media (min-width: $screen-lg) {
+    font-size: 4rem;
+  }
   font-weight: $font-semibold;
   padding-bottom: 1rem; 
+  text-shadow: $shadow-lg;
 }
 
 .subtitle {
   font-size: 1.25rem;
   @media (min-width: $screen-sm) {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+  }
+  @media (min-width: $screen-lg) {
+    font-size: 2.25rem;
   }
   font-weight: $font-regular;
+  text-shadow: $shadow-lg;
+}
+
+.hero-image {
+  height: 100%;
+  pointer-events: none;
+  filter: blur(2px);
+  transform: scale(1.02);
+  transition: filter 1s ease-in-out;
+  transition: transform 3s ease-in-out;
+}
+
+.header:hover {
+  .hero-image {
+    filter: blur(0);
+    transform: scale(1.2);
+  }
 }
