@@ -12,18 +12,19 @@ module.exports = {
         data: `@import "variables";`,
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
         useMozJpeg: true,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./content/assets/`,
+        name: `content`,
+        path: `./content/`,
       },
     },
   ],

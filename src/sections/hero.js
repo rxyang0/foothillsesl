@@ -6,7 +6,7 @@ import styles from './hero.module.scss';
 
 const query = graphql`
   query {
-    heroLaptopMeeting: file(relativePath: { eq: "hero-laptop-meeting.jpg" }) {
+    heroLaptopMeeting: file(relativePath: { eq: "assets/hero-laptop-meeting.jpg" }) {
       childImageSharp {
         fluid(quality: 80) {
           ...GatsbyImageSharpFluid
