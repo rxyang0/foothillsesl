@@ -28,12 +28,12 @@ export default ({ title, subtitle }) => {
     // }
     // header.addEventListener('mousemove', handleMouseMove);
     const handleMouseOver = (evt) => {
-      heroImage.style.filter = 'blur(0)';
       heroImage.style.transform = 'scale(1.1)';
+      heroImage.style.filter = 'blur(0)';
     }
     const handleMouseOut = (evt) => {
+      heroImage.style.transform = 'scale(1.03)';
       heroImage.style.filter = 'blur(2px)';
-      heroImage.style.transform = 'scale(1.05)';
     }
     header.addEventListener('mouseover', handleMouseOver);
     header.addEventListener('mouseout', handleMouseOut);
