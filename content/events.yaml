@@ -6,6 +6,7 @@
   description:
     We will social distance and wear face coverings<br />
     A map will be sent via email
+  graphic: assets/graphics/farm-tour.png
 
 - title:
     Walk at Nose Hill Park
@@ -18,6 +19,7 @@
     <a href="https://www.google.com/maps/place/Nose+Hill+Parking+Lot,+Calgary,+AB/" target="_blank" rel="noreferrer">
       Edgemont parking lot on Shaganappi Trail
     </a>
+  graphic: assets/graphics/park-walk.png
 
 - title:
     Online Canada Party
@@ -25,6 +27,7 @@
     Sunday, June 28, 2:00 pm
   description:
     Celebrate Canada Day with a fun quiz and videos
+  graphic: assets/graphics/canada-party.png
 
 - title:
     Online Scavenger Hunt
@@ -32,6 +35,7 @@
     Sunday, June 7, 2:00 pm
   description:
     Search your home for uncommon items to earn points!
+  graphic: assets/graphics/scavenger-hunt.png
 
 - title:
     Online Talent Show
@@ -39,3 +43,4 @@
     Sunday, May 10, 2:00 pm
   description:
     Everyone is welcome!
+  graphic: assets/graphics/talent-show.png

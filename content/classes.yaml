@@ -5,6 +5,7 @@
     Fifteen weeks
   description:
     Starting "Florence Nightingale" soon
+  graphic: assets/graphics/book-study.png
 
 - title:
     ESL Conversation Class
@@ -13,6 +14,7 @@
     March 26 to August 20
   description:
     Canadian provinces and territories
+  graphic: assets/graphics/conversation-class.png
 
 - title:
     ESL for Gardening
@@ -22,6 +24,7 @@
   description:
     Learn about gardening<br />
     Garden tour on Aug 15, 2:00 pm and Aug 23, 2:00 pm
+  graphic: assets/graphics/gardening.png
 
 - title:
     "Conversation Class: Let's Talk About Cultures!"
@@ -30,6 +33,7 @@
     August 1 to September 12
   description:
     Cultural values and traditions of Canada and your birth country
+  graphic: assets/graphics/world-cultures.png
 
 - title:
     Bridges Plus Bible Study
@@ -37,6 +41,7 @@
     Saturdays, 6:30 – 8:00 pm
   description:
     Learn and discuss biblical verses for all students
+  graphic: assets/graphics/bible-study.png
 
 - title:
     Bridges Beginner
@@ -44,6 +49,7 @@
     Sundays, 11:00 am – 12:15 pm
   description:
     Canadian culture, ESL, life of Jesus
+  graphic: assets/graphics/bridges-beginner.png
 
 - title:
     Bridges Intermediate
@@ -51,3 +57,4 @@
     Sundays, 11:00 am – 12:15 pm
   description:
     Canadian culture, ESL, life of Jesus
+  graphic: assets/graphics/bridges-intermediate.png
