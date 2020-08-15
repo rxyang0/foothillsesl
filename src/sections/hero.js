@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
@@ -18,6 +18,28 @@ const query = graphql`
 
 export default ({ title, subtitle }) => {
   const data = useStaticQuery(query);
+  useEffect(() => {
+    const header = document.querySelector(`.${styles.header}`);
+    const heroImage = header.querySelector(`.${styles.heroImage}`);
+    /* Chrome bug: changes to transform-origin have no effect until transform transition ends
+        https://stackoverflow.com/questions/57000539/chrome-75-break-transform-origin-animation */
+    // const handleMouseMove = (evt) => {
+    //   heroImage.style.transformOrigin = `${evt.clientX}px ${evt.clientY}px`;
+    // }
+    // header.addEventListener('mousemove', handleMouseMove);
+    const handleMouseOver = (evt) => {
+      heroImage.style.filter = 'blur(0)';
+      heroImage.style.transform = 'scale(1.1)';
+    }
+    const handleMouseOut = (evt) => {
+      heroImage.style.filter = 'blur(2px)';
+      heroImage.style.transform = 'scale(1.02)';
+    }
+    header.addEventListener('mouseover', handleMouseOver);
+    header.addEventListener('mouseout', handleMouseOut);
+    header.addEventListener('touchstart', handleMouseOver);
+    header.addEventListener('touchend', handleMouseOut);
+  });
   return (
     <header className={styles.header}>
       <Image fluid={data.heroLaptopMeeting.childImageSharp.fluid} alt="Laptop in online meeting"
