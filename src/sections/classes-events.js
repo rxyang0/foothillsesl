@@ -31,8 +31,8 @@ export default () => {
     <>
       <div className={styles.tabSelector}>
         <div className={`container ${styles.sliderBounds}`}>
-          <div className={styles.classesTab}>See Classes</div>
-          <div className={styles.eventsTab}>See Events</div>
+          <div className={styles.classesTab}><span>See Classes</span></div>
+          <div className={styles.eventsTab}><span>See Events</span></div>
           <div className={styles.slider} />
         </div>
       </div>
