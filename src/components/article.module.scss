@@ -1,5 +1,5 @@
 .article {
-  background-color: $color-blue-dim;
+  background-color: map-get($colors, blue-dim);
   .wrapper {
     @media (min-width: $screen-sm) {
       width: 80%;
@@ -24,7 +24,7 @@
       }
       .title {
         line-height: 1.5;
-        font-weight: $font-semibold;
+        font-weight: map-get($font-weights, semibold);
         padding-bottom: 1.5rem;
         font-size: 1.5rem;
         @media (min-width: $screen-sm) {
@@ -41,6 +41,7 @@
       }
       .description {
         line-height: 1.5;
+        font-weight: map-get($font-weights, medium);
         font-size: 1.1rem;
         @media (min-width: $screen-sm) {
           font-size: 1.35rem;
@@ -55,7 +56,7 @@
 }
 
 .alt-row {
-  background-color: $color-blue-faint;
+  background-color: map-get($colors, blue-faint);
   .wrapper {
     flex-direction: row-reverse;
   }

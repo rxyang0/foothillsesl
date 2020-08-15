@@ -24,7 +24,7 @@
   @media (min-width: $screen-lg) {
     font-size: 4rem;
   }
-  font-weight: $font-semibold;
+  font-weight: map-get($font-weights, semibold);
   padding-bottom: 1rem; 
   text-shadow: $shadow-lg;
 }
@@ -37,7 +37,7 @@
   @media (min-width: $screen-lg) {
     font-size: 2.25rem;
   }
-  font-weight: $font-regular;
+  font-weight: map-get($font-weights, regular);
   text-shadow: $shadow-lg;
 }
 

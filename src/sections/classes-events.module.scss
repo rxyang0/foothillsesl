@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(transparent 50%, $color-blue-dim 50%);
+  background: linear-gradient(transparent 50%, map-get($colors, blue-dim) 50%);
   .slider-bounds {
     position: relative;
     padding: 0;
@@ -38,7 +38,7 @@
       height: 100%;
       width: 50%;
       border-radius: 15px;
-      background-color: $color-blue-light;
+      background-color: map-get($colors, blue-light);
       transition: left 0.3s ease-in-out;
     }
   }

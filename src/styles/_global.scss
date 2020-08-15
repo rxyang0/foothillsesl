@@ -1,10 +1,10 @@
 body {
-  background-color: $color-blue-light;
+  background-color: map-get($colors, blue-light);
   font-family: $fonts;
 }
 
 a {
-  color: $color-blue-dark;
+  color: map-get($colors, blue-dark);
 }
 
 .container {
@@ -24,4 +24,8 @@ a {
   @media (min-width: $screen-xl) {
     max-width: $screen-xl;
   }
+}
+
+.font {
+  @include font-modifiers;
 }

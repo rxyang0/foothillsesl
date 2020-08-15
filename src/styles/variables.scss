@@ -4,16 +4,27 @@ $screen-lg: 1024px;
 $screen-xl: 1280px;
 
 $fonts: "Poppins", sans-serif;
-$font-thin: 100;
-$font-regular: 400;
-$font-semibold: 600;
-$font-black: 900;
+$font-weights: (
+  thin: 100,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+);
+@mixin font-modifiers {
+  @each $name, $value in $font-weights {
+    &-#{$name} {
+      font-weight: $value;
+    }
+  }
+}
 
-$color-background: #fff;
-$color-blue-dim: #edf2f7;
-$color-blue-faint: #fbfcfd;
-$color-blue-light: #27aae1;
-$color-blue-dark: #0e486c;
+$colors: (
+  background: #fff,
+  blue-dim: #edf2f7,
+  blue-faint: #fbfcfd,
+  blue-light: #27aae1,
+  blue-dark: #0e486c,
+);
 
 $shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 $shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);

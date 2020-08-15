@@ -10,10 +10,10 @@
 
 .title {
   font-size: 4rem;
-  font-weight: $font-semibold;
+  font-weight: map-get($font-weights, semibold);
 }
 
 .subtitle {
   font-size: 2rem;
-  font-weight: $font-regular;
+  font-weight: map-get($font-weights, regular);
 }
