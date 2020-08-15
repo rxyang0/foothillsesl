@@ -9,7 +9,7 @@ const query = graphql`
     heroLaptopMeeting: file(relativePath: { eq: "assets/hero-laptop-meeting.jpg" }) {
       childImageSharp {
         fluid(quality: 80) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -33,12 +33,12 @@ export default ({ title, subtitle }) => {
     }
     const handleMouseOut = (evt) => {
       heroImage.style.filter = 'blur(2px)';
-      heroImage.style.transform = 'scale(1.02)';
+      heroImage.style.transform = 'scale(1.05)';
     }
     header.addEventListener('mouseover', handleMouseOver);
     header.addEventListener('mouseout', handleMouseOut);
-    header.addEventListener('touchstart', handleMouseOver);
-    header.addEventListener('touchend', handleMouseOut);
+    header.addEventListener('touchstart', handleMouseOver, {passive: true});
+    header.addEventListener('touchend', handleMouseOut, {passive: true});
   });
   return (
     <header className={styles.header}>

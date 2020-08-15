@@ -53,7 +53,7 @@ export const query = graphql`
           graphic {
             childImageSharp {
               fixed(height: 204) {
-                ...GatsbyImageSharpFixed
+                ...GatsbyImageSharpFixed_withWebp_tracedSVG
               }
             }
           }
@@ -69,7 +69,7 @@ export const query = graphql`
           graphic {
             childImageSharp {
               fixed(height: 204) {
-                ...GatsbyImageSharpFixed
+                ...GatsbyImageSharpFixed_withWebp_tracedSVG
               }
             }
           }
