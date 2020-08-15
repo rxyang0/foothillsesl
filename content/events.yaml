@@ -5,7 +5,7 @@
     Depart Calgary at around 1:00 pm to arrive on time
   description:
     We will social distance and wear face coverings<br />
-    A map will be sent via email
+    <span class="font-regular">A map will be sent via email</span>
   graphic: assets/graphics/farm-tour.png
 
 - title:
@@ -15,10 +15,12 @@
     Return to parking lot at 3:00 pm
   description:
     We will social distance and wear face coverings<br />
-    Meet at
-    <a href="https://www.google.com/maps/place/Nose+Hill+Parking+Lot,+Calgary,+AB/" target="_blank" rel="noreferrer">
-      Edgemont parking lot on Shaganappi Trail
-    </a>
+    <span class="font-regular">
+      Meet at
+      <a href="https://www.google.com/maps/place/Nose+Hill+Parking+Lot,+Calgary,+AB/" target="_blank" rel="noreferrer">
+        Edgemont parking lot on Shaganappi Trail
+      </a>
+    </span>
   graphic: assets/graphics/park-walk.png
 
 - title:
