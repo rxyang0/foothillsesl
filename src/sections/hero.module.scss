@@ -44,7 +44,5 @@
 .hero-image {
   height: 100%;
   pointer-events: none;
-  transform: scale(1.03);
-  filter: blur(2px);
   transition: filter 0.5s ease-in-out, transform 2s ease-in-out, transform-origin 0.3s linear;
 }

@@ -21,6 +21,12 @@ export default ({ title, subtitle }) => {
   useEffect(() => {
     const header = document.querySelector(`.${styles.header}`);
     const heroImage = header.querySelector(`.${styles.heroImage}`);
+    const heroTransformInit = 'scale(1.03)';
+    const heroFilterInit = 'blur(2px)';
+    const heroTransformFinal = 'scale(1.1)';
+    const heroFilterFinal = 'blur(0)';
+    heroImage.style.transform = heroTransformInit;
+    heroImage.style.filter = heroFilterInit;
     /* Chrome bug: changes to transform-origin have no effect until transform transition ends
         https://stackoverflow.com/questions/57000539/chrome-75-break-transform-origin-animation */
     // const handleMouseMove = (evt) => {
@@ -28,12 +34,12 @@ export default ({ title, subtitle }) => {
     // }
     // header.addEventListener('mousemove', handleMouseMove);
     const handleMouseOver = (evt) => {
-      heroImage.style.transform = 'scale(1.1)';
-      heroImage.style.filter = 'blur(0)';
+      heroImage.style.transform = heroTransformFinal;
+      heroImage.style.filter = heroFilterFinal;
     }
     const handleMouseOut = (evt) => {
-      heroImage.style.transform = 'scale(1.03)';
-      heroImage.style.filter = 'blur(2px)';
+      heroImage.style.transform = heroTransformInit;
+      heroImage.style.filter = heroFilterInit;
     }
     header.addEventListener('mouseover', handleMouseOver);
     header.addEventListener('mouseout', handleMouseOut);
