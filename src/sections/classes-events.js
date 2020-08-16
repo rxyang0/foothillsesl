@@ -12,20 +12,68 @@ export default () => {
     const classesTab = sliderBounds.querySelector(`.${styles.classesTab}`);
     const eventsTab = sliderBounds.querySelector(`.${styles.eventsTab}`);
     const slider = sliderBounds.querySelector(`.${styles.slider}`);
-    const handleClassesTab = () => {
-      setTab('classes');
-      slider.style.left = '0%';
-      classesTab.style.color = '#fff';
-      eventsTab.style.color = '#000';
+    const sliderWidth = slider.offsetWidth;
+    const sliderTransition = 'left 0.2s ease-in-out';
+    slider.style.transition = sliderTransition;
+    let prevLeft;
+    let startX;
+    let holding;
+    const handleSwitchTab = (tabName) => {
+      if (tabName === 'classes') {
+        slider.style.left = '0px';
+        classesTab.style.color = '#fff';
+        eventsTab.style.color = '#000';
+      } else {
+        slider.style.left = `${sliderWidth}px`;
+        classesTab.style.color = '#000';
+        eventsTab.style.color = '#fff';
+      }
+      setTab(tabName);
     }
-    const handleEventsTab = () => {
-      setTab('events');
-      slider.style.left = '50%';
-      classesTab.style.color = '#000';
-      eventsTab.style.color = '#fff';
+    const handleSliderMouseDown = (evt) => {
+      evt.preventDefault(); // Prevent text selection when dragging
+      prevLeft = parseInt(getComputedStyle(slider).left, 10);
+      console.log(prevLeft);
+      startX = evt.type === 'touchstart' ? evt.touches[0].clientX : evt.clientX;
+      holding = true;
+      slider.style.transition = 'none';
+      console.log(`fire`);
     }
-    classesTab.addEventListener('click', handleClassesTab);
-    eventsTab.addEventListener('click', handleEventsTab);
+    const handleSliderMouseMove = (evt) => {
+      if (holding) {
+        evt.preventDefault(); // Prevent touch scroll
+        /* Update left with prevLeft + diff */
+        let left = prevLeft + ((evt.type === 'touchmove' ? evt.touches[0].clientX : evt.clientX) - startX);
+        /* Prevent dragging past slider bounds */
+        if (left < 0) {
+          left = 0;
+        } else if (left > sliderWidth) {
+          left = sliderWidth;
+        }
+        slider.style.left = `${left}px`;
+      }
+    }
+    const handleSliderMouseUp = (evt) => {
+      holding = false;
+      slider.style.transition = sliderTransition;
+      const sliderChange = parseInt(getComputedStyle(slider).left, 10) - prevLeft;
+      if (Math.abs(sliderChange) > sliderWidth / 2) { // Sufficient drag
+        handleSwitchTab(sliderChange > 0 ? 'events' : 'classes');
+      } else { // Insufficient drag, or click
+        const clickX = evt.clientX - sliderBounds.getBoundingClientRect().left;
+        if (evt.target === sliderBounds) { // Click: mouseup event attached to document
+          handleSwitchTab(clickX > sliderWidth ? 'events' : 'classes');
+        } else { // Insufficient drag: reset
+          slider.style.left = `${prevLeft}px`;
+        }
+      }
+    }
+    slider.addEventListener('mousedown', handleSliderMouseDown);
+    document.addEventListener('mousemove', handleSliderMouseMove);
+    document.addEventListener('mouseup', handleSliderMouseUp);
+    slider.addEventListener('touchstart', handleSliderMouseDown);
+    slider.addEventListener('touchmove', handleSliderMouseMove);
+    slider.addEventListener('touchend', handleSliderMouseUp);
   });
   return (
     <>
@@ -36,8 +84,8 @@ export default () => {
           <div className={styles.slider} />
         </div>
       </div>
-      {tab === 'events' && <Pane edges={data.allEventsYaml.edges} />}
       {tab === 'classes' && <Pane edges={data.allClassesYaml.edges} />}
+      {tab === 'events' && <Pane edges={data.allEventsYaml.edges} />}
     </>
   );
 }
