@@ -1,19 +1,18 @@
-.container {
-  @extend .container;
+.banner {
   display: flex;
+  height: 80vh;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  height: 80vh;
   line-height: 1.5;
-}
+  text-align: center;
 
-.title {
-  font-size: 4rem;
-  font-weight: map-get($font-weights, semibold);
-}
-
-.subtitle {
-  font-size: 2rem;
-  font-weight: map-get($font-weights, regular);
+  .title {
+    font-size: 4rem;
+    font-weight: map-get($font-weights, semibold);
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    font-weight: map-get($font-weights, regular);
+  }
 }

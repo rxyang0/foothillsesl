@@ -1,63 +1,70 @@
 .article {
   background-color: map-get($colors, blue-dim);
+  
   .wrapper {
     @media (min-width: $screen-sm) {
       width: 80%;
     }
-    min-height: 300px;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
     display: flex;
+    min-height: 300px;
     flex-direction: row;
     flex-wrap: wrap-reverse;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     margin-bottom: -2rem;
-    .details {
-      margin-bottom: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex-basis: 100%;
-      @media (min-width: $screen-md) {
-        flex-basis: auto;
-      }
-      .title {
-        line-height: 1.5;
-        font-weight: map-get($font-weights, semibold);
-        padding-bottom: 1.5rem;
-        font-size: 1.5rem;
-        @media (min-width: $screen-sm) {
-          font-size: 1.875rem;
-        }
-      }
-      .date {
-        line-height: 1.25;
-        padding-bottom: 1.5rem;
-        font-size: 1rem;
-        @media (min-width: $screen-sm) {
-          font-size: 1.2rem;
-        }
-      }
-      .description {
-        line-height: 1.5;
-        font-weight: map-get($font-weights, medium);
-        font-size: 1.1rem;
-        @media (min-width: $screen-sm) {
-          font-size: 1.35rem;
-        }
-      }
-    }
-    .graphic {
-      max-width: 400px;
-      margin-bottom: 2rem;
-    }
   }
 }
 
 .alt-row {
   background-color: map-get($colors, blue-faint);
+
   .wrapper {
     flex-direction: row-reverse;
   }
+}
+
+.details {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  @media (min-width: $screen-md) {
+    flex-basis: auto;
+  }
+
+  .title {
+    padding-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: map-get($font-weights, semibold);
+    line-height: 1.5;
+    @media (min-width: $screen-sm) {
+      font-size: 1.875rem;
+    }
+  }
+
+  .date {
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    @media (min-width: $screen-sm) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .description {
+    font-size: 1.1rem;
+    font-weight: map-get($font-weights, medium);
+    line-height: 1.5;
+    @media (min-width: $screen-sm) {
+      font-size: 1.35rem;
+    }
+  }
+}
+
+.graphic {
+  max-width: 400px;
+  margin-bottom: 2rem;
 }

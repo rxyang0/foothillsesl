@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const siteMetadataQuery = graphql`
+const query = graphql`
   query {
     site {
       siteMetadata {
@@ -14,30 +14,31 @@ const siteMetadataQuery = graphql`
   }
 `;
 
-const SEO = ({ title, description }) => {
-  const { site } = useStaticQuery(siteMetadataQuery);
+export default function SEO({ title, description }) {
+  const { site } = useStaticQuery(query);
   const seo = {
-    title: title || site.siteMetadata.title,
-    description: description || site.siteMetadata.description
-  }
+    title: title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title,
+    description: description || site.siteMetadata.description,
+  };
   return (
-    <Helmet title={seo.title} titleTemplate={title ? `%s | ${site.siteMetadata.title}` : seo.title}
+    <Helmet
+      title={seo.title}
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: seo.description,
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: seo.title,
         },
         {
-          property: `og:description`,
+          property: 'og:description',
           content: seo.description,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:type',
+          content: 'website',
         },
       ]}
     />
@@ -47,6 +48,9 @@ const SEO = ({ title, description }) => {
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-}
+};
 
-export default SEO;
+SEO.defaultProps = {
+  title: null,
+  description: null,
+};

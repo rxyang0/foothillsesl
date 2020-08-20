@@ -8,10 +8,10 @@ a {
 }
 
 .container {
-  padding: 0 1rem;
   width: 100%;
-  margin-left: auto;
+  padding: 0 1rem;
   margin-right: auto;
+  margin-left: auto;
   @media (min-width: $screen-sm) {
     max-width: $screen-sm;
   }

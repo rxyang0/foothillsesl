@@ -1,9 +1,9 @@
 .section-message {
   padding: 4rem 0;
-  text-align: center;
   font-size: 1.125rem;
+  line-height: 1.5;
+  text-align: center;
   @media (min-width: $screen-sm) {
     font-size: 1.25rem;
   }
-  line-height: 1.5;
 }

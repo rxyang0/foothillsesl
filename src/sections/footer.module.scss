@@ -1,12 +1,13 @@
 .footer {
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 10vh;
+  justify-content: center;
+  padding: 1rem 0;
   background-color: map-get($colors, blue-dark);
   color: #fff;
   line-height: 1.5;
+  text-align: center;
+
   a {
     color: #fff;
   }
