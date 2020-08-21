@@ -2,16 +2,26 @@
     ESL Book Study
   date:
     Upcoming Tuesdays, 9:30 – 11:30 am<br />
-    Fifteen weeks
-  description:
-    Starting "Florence Nightingale" soon
+    Starting Tuesday, September 22, 2020 for fifteen weeks
+  description: |
+    Study a biography about Florence Nightingale<br />
+    <span class="font-regular">Cost: $15 (pay for the book at the church reception desk)</span>
   graphic: assets/graphics/book-study.png
+
+- title:
+    Women’s ESL Friends in English
+  date:
+    Upcoming Thursdays, 9:30 – 11:30 am<br />
+    Starting Thursday, September 24, 2020
+  description:
+    Study famous women around the world
+  graphic: assets/graphics/women-esl.png
 
 - title:
     ESL Conversation Class
   date:
     Thursdays, 7:00 – 8:15 pm<br />
-    March 26 to August 20
+    March 26, 2020 to August 20, 2020
   description:
     Canadian provinces and territories
   graphic: assets/graphics/conversation-class.png
@@ -20,7 +30,7 @@
     ESL for Gardening
   date:
     Saturdays, 11:00 am – 12:15 pm<br />
-    August 1 to August 29
+    August 1, 2020 to August 29, 2020
   description:
     Learn about gardening<br />
     <span class="font-regular">Garden tour on Aug 15, 2:00 pm and Aug 23, 2:00 pm</span>
@@ -30,7 +40,7 @@
     "Conversation Class: Let's Talk About Cultures!"
   date:
     Saturdays, 5:00 – 6:15 pm<br />
-    August 1 to September 12
+    August 1, 2020 to September 12, 2020
   description:
     Cultural values and traditions of Canada and your birth country
   graphic: assets/graphics/world-cultures.png

@@ -44,7 +44,7 @@ export default function Article({ content, altRow }) {
           />
         </div>
         <Image
-          fixed={content.graphic.childImageSharp.fixed}
+          fixed={content.graphic ? content.graphic.childImageSharp.fixed : false}
           className={styles.graphic}
           imgStyle={{ objectFit: 'contain' }}
           alt={content.altText}

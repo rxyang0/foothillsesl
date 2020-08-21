@@ -1,7 +1,15 @@
 - title:
+    Pantry Party for Newlyweds
+  date:
+    Sunday, September 13, 2020
+  description:
+    Hanna & Brodie will show wedding photos!
+  graphic: assets/graphics/pantry-party.png
+
+- title:
     Tour of <a href="https://www.saskaberryranch.com/" target="_blank" rel="noreferrer">The Saskaberry Ranch</a>
   date:
-    Sunday, August 16, 2:00–4:00 pm<br />
+    Sunday, August 16, 2020 2:00–4:00 pm<br />
     Depart Calgary at around 1:00 pm to arrive on time
   description:
     We will social distance and wear face coverings<br />
@@ -11,7 +19,7 @@
 - title:
     Walk at Nose Hill Park
   date:
-    Sunday, July 26, 2:00 pm<br />
+    Sunday, July 26, 2020 2:00 pm<br />
     Return to parking lot at 3:00 pm
   description:
     We will social distance and wear face coverings<br />
@@ -26,7 +34,7 @@
 - title:
     Online Canada Party
   date:
-    Sunday, June 28, 2:00 pm
+    Sunday, June 28, 2020 2:00 pm
   description:
     Celebrate Canada Day with a fun quiz and videos
   graphic: assets/graphics/canada-party.png
@@ -34,7 +42,7 @@
 - title:
     Online Scavenger Hunt
   date:
-    Sunday, June 7, 2:00 pm
+    Sunday, June 7, 2020 2:00 pm
   description:
     Search your home for uncommon items to earn points!
   graphic: assets/graphics/scavenger-hunt.png
@@ -42,7 +50,7 @@
 - title:
     Online Talent Show
   date:
-    Sunday, May 10, 2:00 pm
+    Sunday, May 10, 2020 2:00 pm
   description:
     Everyone is welcome!
   graphic: assets/graphics/talent-show.png

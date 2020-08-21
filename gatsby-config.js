@@ -16,6 +16,7 @@ module.exports = {
       resolve: 'gatsby-plugin-sharp',
       options: {
         useMozJpeg: true,
+        defaultQuality: 85,
       },
     },
     'gatsby-transformer-sharp',
