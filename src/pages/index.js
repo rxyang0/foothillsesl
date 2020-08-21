@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 import styles from './index.module.scss';
 import Layout from '../components/layout';
@@ -15,14 +16,19 @@ export default function IndexPage() {
         subtitle="Welcome all beginner, intermediate, and advanced students!"
       />
       <section className={styles.sectionMessage}>
-        <div className="container">
+        <motion.div
+          className="container"
+          initial={{ y: 30 }}
+          animate={{ y: 0 }}
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+        >
           <p>We are currently hosting classes and events via Zoom online meetings.</p>
           <p>
             {'Please email '}
             <a href="mailto:esl@foothillsalliance.com">esl@foothillsalliance.com</a>
             {' to receive the invitation emails.'}
           </p>
-        </div>
+        </motion.div>
       </section>
       <ClassesEvents />
     </Layout>

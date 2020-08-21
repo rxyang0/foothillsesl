@@ -17,8 +17,12 @@
   box-shadow: $shadow-md;
   font-size: 1.25rem;
   
-  @media (min-width: $screen-sm) {
-    width: 920px;
+  @media (min-width: $screen-md) {
+    width: 65%;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: 50%;
   }
   
   .slider {
@@ -44,4 +48,8 @@
 
 .classes-tab {
   color: #fff;
+}
+
+.classes-events {
+  background-color: map-get($colors, 'blue-dim');
 }

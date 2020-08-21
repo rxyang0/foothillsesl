@@ -2,9 +2,6 @@
   background-color: map-get($colors, blue-dim);
   
   .wrapper {
-    @media (min-width: $screen-sm) {
-      width: 80%;
-    }
     display: flex;
     min-height: 300px;
     flex-direction: row;

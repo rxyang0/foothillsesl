@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import styles from './classes-events.module.scss';
 import Pane from '../components/pane';
@@ -110,6 +111,11 @@ export default function ClassesEvents() {
     slider.addEventListener('touchmove', handleSliderMouseMove, { passive: true });
     slider.addEventListener('touchend', handleSliderMouseUp, { passive: true });
   });
+  const mal = {
+    hide: { opacity: 0 },
+    out: { y: '100vh' },
+    in: { y: 0, transition: { ease: 'easeOut', duration: 0.5 } },
+  };
   return (
     <>
       <div className={styles.tabSelector}>
@@ -119,8 +125,20 @@ export default function ClassesEvents() {
           <div className={styles.slider} />
         </div>
       </div>
-      {tab === 'classes' && <Pane edges={data.allClassesYaml.edges} />}
-      {tab === 'events' && <Pane edges={data.allEventsYaml.edges} />}
+      <div className={styles.classesEvents}>
+        <AnimatePresence>
+          {tab === 'classes' && (
+            <motion.section key="classes" variants={mal} initial="out" animate="in" exit="hide">
+              <Pane edges={data.allClassesYaml.edges} />
+            </motion.section>
+          )}
+          {tab === 'events' && (
+            <motion.section key="events" variants={mal} initial="out" animate="in" exit="hide">
+              <Pane edges={data.allEventsYaml.edges} />
+            </motion.section>
+          )}
+        </AnimatePresence>
+      </div>
     </>
   );
 }
