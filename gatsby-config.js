@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Foothills Intercultural Ministries',
     description: 'ESL classes and more for beginner, intermediate, and advanced students!',
+    image: 'https://foothillsesl.ca/FAC-IM-logo-og.png',
+    url: 'https://foothillsesl.ca',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
