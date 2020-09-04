@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 
 import styles from './classes-events.module.scss';
 import Pane from '../components/pane';
@@ -45,85 +45,73 @@ const query = graphql`
 export default function ClassesEvents() {
   const data = useStaticQuery(query);
   const [tab, setTab] = useState('classes');
-  useEffect(() => {
-    const sliderBounds = document.querySelector(`.${styles.sliderBounds}`);
-    const classesTab = sliderBounds.querySelector(`.${styles.classesTab}`);
-    const eventsTab = sliderBounds.querySelector(`.${styles.eventsTab}`);
-    const slider = sliderBounds.querySelector(`.${styles.slider}`);
-    const sliderWidth = slider.offsetWidth;
-    const sliderTransition = 'left 0.2s ease-in-out';
-    let prevLeft;
-    let startX;
-    let holding;
-    const handleSwitchTab = (tabName) => {
-      if (tabName === 'classes') {
-        slider.style.left = '0px';
-        classesTab.style.color = '#fff';
-        eventsTab.style.color = '#000';
+
+  const sliderBounds = useRef(null);
+  const sliderControls = useAnimation();
+
+  const handleSetTab = (newTab) => {
+    switch (newTab) {
+      case 'classes':
+        sliderControls.start({ x: 0 });
+        setTab('classes');
+        break;
+      case 'events':
+        sliderControls.start({ x: sliderBounds.current.offsetWidth / 2 });
+        setTab('events');
+        break;
+      default:
+    }
+  };
+
+  const handleSliderDragEnd = (evt, { offset }) => {
+    if (Math.abs(offset.x) > (sliderBounds.current.offsetWidth / 4)) { // Sufficient drag
+      handleSetTab(offset.x > 0 ? 'events' : 'classes');
+    } else { // Insufficient drag: reset
+      handleSetTab(tab);
+    }
+  };
+
+  const handleSliderBoundsClick = (evt) => {
+    if (evt.target === sliderBounds.current) { // Do not trigger on slider drag end
+      if (evt.offsetX < sliderBounds.current.offsetWidth / 2) {
+        handleSetTab('classes');
       } else {
-        slider.style.left = `${sliderWidth}px`;
-        classesTab.style.color = '#000';
-        eventsTab.style.color = '#fff';
+        handleSetTab('events');
       }
-      setTab(tabName);
-    };
-    const handleSliderMouseDown = (evt) => {
-      evt.preventDefault(); // Prevent text selection when dragging
-      prevLeft = parseInt(getComputedStyle(slider).left, 10);
-      startX = evt.type === 'touchstart' ? evt.touches[0].clientX : evt.clientX;
-      holding = true;
-      slider.style.transition = 'none';
-    };
-    const handleSliderMouseMove = (evt) => {
-      if (holding) {
-        evt.preventDefault(); // Prevent touch scroll
-        /* Update left with prevLeft + diff */
-        const currentX = evt.type === 'touchmove' ? evt.touches[0].clientX : evt.clientX;
-        let left = prevLeft + (currentX - startX);
-        /* Prevent dragging past slider bounds */
-        if (left < 0) {
-          left = 0;
-        } else if (left > sliderWidth) {
-          left = sliderWidth;
-        }
-        slider.style.left = `${left}px`;
-      }
-    };
-    const handleSliderMouseUp = (evt) => {
-      holding = false;
-      slider.style.transition = sliderTransition;
-      const sliderChange = parseInt(getComputedStyle(slider).left, 10) - prevLeft;
-      if (Math.abs(sliderChange) > sliderWidth / 2) { // Sufficient drag
-        handleSwitchTab(sliderChange > 0 ? 'events' : 'classes');
-      } else { // Insufficient drag, or click
-        const clickX = evt.clientX - sliderBounds.getBoundingClientRect().left;
-        if (evt.target === sliderBounds) { // Click: mouseup event attached to document
-          handleSwitchTab(clickX > sliderWidth ? 'events' : 'classes');
-        } else { // Insufficient drag: reset
-          slider.style.left = `${prevLeft}px`;
-        }
-      }
-    };
-    slider.addEventListener('mousedown', handleSliderMouseDown);
-    document.addEventListener('mousemove', handleSliderMouseMove);
-    document.addEventListener('mouseup', handleSliderMouseUp);
-    slider.addEventListener('touchstart', handleSliderMouseDown, { passive: true });
-    slider.addEventListener('touchmove', handleSliderMouseMove, { passive: true });
-    slider.addEventListener('touchend', handleSliderMouseUp, { passive: true });
-  });
+    }
+  };
+
   const mal = {
     hide: { opacity: 0 },
     out: { y: '100vh' },
     in: { y: 0, transition: { ease: 'easeOut', duration: 0.5 } },
   };
+
   return (
     <>
       <div className={styles.tabSelector}>
-        <div className={`container ${styles.sliderBounds}`}>
-          <div className={styles.classesTab}><span>See Classes</span></div>
-          <div className={styles.eventsTab}><span>See Events</span></div>
-          <div className={styles.slider} />
-        </div>
+        <motion.div
+          ref={sliderBounds}
+          className={`container ${styles.sliderBounds}`}
+          onTap={handleSliderBoundsClick}
+        >
+          <div className={styles.classesTab} style={{ color: tab === 'classes' ? '#fff' : '#000' }}>
+            <span>See Classes</span>
+          </div>
+          <div className={styles.eventsTab} style={{ color: tab === 'events' ? '#fff' : '#000' }}>
+            <span>See Events</span>
+          </div>
+          <motion.div
+            className={styles.slider}
+            animate={sliderControls}
+            transition={{ ease: 'easeInOut', duration: 0.2 }}
+            drag="x"
+            dragConstraints={sliderBounds}
+            dragElastic={0}
+            dragMomentum={false}
+            onDragEnd={handleSliderDragEnd}
+          />
+        </motion.div>
       </div>
       <div className={styles.classesEvents}>
         <AnimatePresence>
