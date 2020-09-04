@@ -1,3 +1,31 @@
+.section-heading {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  text-align: center;
+  @media (min-width: $screen-sm) {
+    width: 50%;
+    font-size: 1.25rem;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: map-get($font-weights, medium);
+}
+
+.future-link {
+  padding-bottom: 2rem;
+  font-size: 1.25rem;
+  text-align: center;
+
+  a {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 .tab-selector {
   display: flex;
   height: 56px;
@@ -15,6 +43,7 @@
   background-color: #e0e0e0;
   border-radius: 15px;
   box-shadow: $shadow-md;
+  cursor: grab;
   font-size: 1.25rem;
   
   @media (min-width: $screen-md) {
@@ -48,4 +77,9 @@
 
 .classes-events {
   background-color: map-get($colors, 'blue-dim');
+}
+
+.section-divider {
+  border: 0.2rem solid map-get($colors, 'blue-light');
+  background-color: map-get($colors, 'blue-light');
 }

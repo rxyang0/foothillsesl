@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 import styles from './classes-events.module.scss';
 import Pane from '../components/pane';
@@ -24,6 +25,22 @@ const query = graphql`
       }
     }
     allEventsYaml {
+      edges {
+        node {
+          title
+          date
+          description
+          graphic {
+            childImageSharp {
+              fixed(height: 204) {
+                ...GatsbyImageSharpFixed_withWebp_tracedSVG
+              }
+            }
+          }
+        }
+      }
+    }
+    allFutureYaml {
       edges {
         node {
           title
@@ -89,44 +106,88 @@ export default function ClassesEvents() {
 
   return (
     <>
-      <div className={styles.tabSelector}>
+      <hr className={styles.sectionDivider} />
+      <section id="classes-events">
         <motion.div
-          ref={sliderBounds}
-          className={`container ${styles.sliderBounds}`}
-          onTap={handleSliderBoundsClick}
+          className={`container ${styles.sectionHeading}`}
+          initial={{ y: 30 }}
+          animate={{ y: 0 }}
+          transition={{ ease: 'easeOut', duration: 0.5 }}
         >
-          <div className={styles.classesTab} style={{ color: tab === 'classes' ? '#fff' : '#000' }}>
-            <span>See Classes</span>
-          </div>
-          <div className={styles.eventsTab} style={{ color: tab === 'events' ? '#fff' : '#000' }}>
-            <span>See Events</span>
-          </div>
-          <motion.div
-            className={styles.slider}
-            animate={sliderControls}
-            transition={{ ease: 'easeInOut', duration: 0.2 }}
-            drag="x"
-            dragConstraints={sliderBounds}
-            dragElastic={0}
-            dragMomentum={false}
-            onDragEnd={handleSliderDragEnd}
-          />
+          <p className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>Fall 2020</p>
+          <p>
+            We are currently hosting classes and events via Zoom online meetings.
+            {' Please email '}
+            <a href="mailto:esl@foothillsalliance.com">esl@foothillsalliance.com</a>
+            {' to receive the invitation emails.'}
+          </p>
         </motion.div>
-      </div>
-      <div className={styles.classesEvents}>
-        <AnimatePresence>
-          {tab === 'classes' && (
-            <motion.section key="classes" variants={mal} initial="out" animate="in" exit="hide">
-              <Pane edges={data.allClassesYaml.edges} />
-            </motion.section>
-          )}
-          {tab === 'events' && (
-            <motion.section key="events" variants={mal} initial="out" animate="in" exit="hide">
-              <Pane edges={data.allEventsYaml.edges} />
-            </motion.section>
-          )}
-        </AnimatePresence>
-      </div>
+        <div className={styles.futureLink}>
+          <Link to="future" smooth="easeInOutQuad" duration={800}>
+            See Future Classes
+          </Link>
+        </div>
+        <div className={styles.tabSelector}>
+          <motion.div
+            ref={sliderBounds}
+            className={`container ${styles.sliderBounds}`}
+            onTap={handleSliderBoundsClick}
+          >
+            <div
+              className={styles.classesTab}
+              style={{ color: tab === 'classes' ? '#fff' : '#000' }}
+            >
+              <span>See Classes</span>
+            </div>
+            <div
+              className={styles.eventsTab}
+              style={{ color: tab === 'events' ? '#fff' : '#000' }}
+            >
+              <span>See Events</span>
+            </div>
+            <motion.div
+              className={styles.slider}
+              animate={sliderControls}
+              transition={{ ease: 'easeInOut', duration: 0.2 }}
+              drag="x"
+              dragConstraints={sliderBounds}
+              dragElastic={0}
+              dragMomentum={false}
+              onDragEnd={handleSliderDragEnd}
+            />
+          </motion.div>
+        </div>
+        <div className={styles.classesEvents}>
+          <AnimatePresence>
+            {tab === 'classes' && (
+              <motion.section key="classes" variants={mal} initial="out" animate="in" exit="hide">
+                <Pane edges={data.allClassesYaml.edges} />
+              </motion.section>
+            )}
+            {tab === 'events' && (
+              <motion.section key="events" variants={mal} initial="out" animate="in" exit="hide">
+                <Pane edges={data.allEventsYaml.edges} />
+              </motion.section>
+            )}
+          </AnimatePresence>
+        </div>
+      </section>
+      <hr className={styles.sectionDivider} style={{ marginTop: '2rem' }} />
+      <section id="future">
+        <motion.section
+          className={`container ${styles.sectionHeading}`}
+          initial={{ y: 30 }}
+          animate={{ y: 0 }}
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+        >
+          <p className={styles.sectionTitle}>Future Classes</p>
+        </motion.section>
+        <div className={styles.classesEvents}>
+          <motion.section key="events" variants={mal} initial="out" animate="in" exit="hide">
+            <Pane edges={data.allFutureYaml.edges} />
+          </motion.section>
+        </div>
+      </section>
     </>
   );
 }
