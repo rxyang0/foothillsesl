@@ -132,6 +132,7 @@ export default function Hero({ title, subtitle }) {
         className={styles.paginateLeft}
         onClick={() => paginate(-1)}
         onKeyPress={() => paginate(-1)}
+        aria-label="Previous slideshow photo"
       >
         <FaAngleLeft />
       </span>
@@ -142,6 +143,7 @@ export default function Hero({ title, subtitle }) {
         className={styles.paginateRight}
         onClick={() => paginate(1)}
         onKeyPress={() => paginate(1)}
+        aria-label="Next slideshow photo"
       >
         <FaAngleRight />
       </span>
