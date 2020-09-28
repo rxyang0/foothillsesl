@@ -1,18 +1,26 @@
 - title:
     ESL Book Study
   date:
-    Upcoming Tuesdays, 9:30 – 11:30 am<br />
-    Starting Tuesday, Sep 22, 2020 for twelve classes
+    Tuesdays, 9:30 – 11:30 am<br />
+    Sep 22 to Dec 15, 2020
   description: |
     Study a biography about Florence Nightingale<br />
     <span class="font-regular">Cost: $15 (pay for the book at the church reception desk)</span>
   graphic: assets/graphics/book-study.png
 
 - title:
+    ESL Writing Class
+  date:
+    Wednesdays, 7:00 – 8:00 pm<br />
+    Starting Sep 23, 2020
+  description:
+    
+  graphic: assets/graphics/esl-writing.png
+
+- title:
     Women’s ESL Friends in English
   date:
-    Upcoming Thursdays, 9:30 – 11:30 am<br />
-    Starting Thursday, Sep 24, 2020
+    Thursdays, 9:30 – 11:30 am
   description:
     Study famous women around the world
   graphic: assets/graphics/women-esl.png
@@ -21,16 +29,34 @@
     ESL Conversation Class
   date:
     Thursdays, 7:00 – 8:15 pm<br />
-    Twelve classes from Sep 24 to Dec 10, 2020
+    Sep 24 to Dec 10, 2020
   description:
     Fun topics for beginner, intermediate, and advanced students!
   graphic: assets/graphics/conversation-class.png
 
 - title:
+    ESL High-Beginner Class
+  date:
+    Saturdays, 10:00 – 11:00 am<br />
+    Starting Sep 26, 2020
+  description:
+
+  graphic: assets/graphics/esl-high-beginner.png
+
+- title:
+    ESL Intermediate Class
+  date:
+    Saturdays, 10:00 – 11:00 am<br />
+    Starting Sep 26, 2020
+  description:
+
+  graphic: assets/graphics/esl-intermediate.png
+
+- title:
     ESL With Art
   date:
     Saturdays, 3:00 – 4:30 pm<br />
-    Four classes from Sep 12 to Oct 3, 2020<br />
+    Sep 12 to Oct 3, 2020<br />
     Class 1 is online; classes 2, 3, and 4 are at the building
   description: |
     Practice English skills while doing art!
@@ -43,19 +69,10 @@
   graphic: assets/graphics/esl-art.png
 
 - title:
-    "Conversation Class: Let's Talk About Cultures!"
-  date:
-    Saturdays, 5:00 – 6:15 pm<br />
-    Aug 1 to Sep 12, 2020
-  description:
-    Cultural values and traditions of Canada and your birth country
-  graphic: assets/graphics/world-cultures.png
-
-- title:
     Pronunciation Practice Class
   date:
     Saturdays, 5:00 – 6:00 pm<br />
-    Twelve classes from Sep 26 to Dec 12, 2020
+    Sep 26 to Dec 12, 2020
   description:
     Practice sounds in English speaking for intermediate and advanced students
   graphic: assets/graphics/pronunciation-practice.png
@@ -72,7 +89,7 @@
     Project Confidence
   date:
     Sundays, 9:00 – 10:30 am<br />
-    Four classes from Oct 4 to Oct 25, 2020
+    Oct 4 to Oct 25, 2020
   description:
     Improve your speaking skills!
   graphic: assets/graphics/project-confidence.png
@@ -81,7 +98,7 @@
     Citizenship Test Preparation
   date:
     Sundays, 9:00 – 10:30 am<br />
-    Five classes from Nov 1 to Nov 29, 2020
+    Nov 1 to Nov 29, 2020
   description:
     All students are welcome to study Canadian history, geography, and governments<br />
     <span class="font-regular">Register via email to get your study binder</span>
