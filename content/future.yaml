@@ -15,9 +15,25 @@
   graphic: assets/graphics/gardening.png
 
 - title:
-    "Conversation Class: Let's Talk About Cultures!"
+    ESL with Art
   date:
-    Winter 2021
+    "2021"
   description:
-    Cultural values and traditions of Canada and your birth country
-  graphic: assets/graphics/world-cultures.png
+    Practice English skills while doing art
+  graphic: assets/graphics/esl-art.png
+
+- title:
+    Project Confidence
+  date:
+    "2021"
+  description:
+    Improve your speaking skills
+  graphic: assets/graphics/project-confidence.png
+
+- title:
+    Citizenship Test Preparation
+  date:
+    "2021"
+  description:
+    All students are welcome to study Canadian history, geography, and governments
+  graphic: assets/graphics/citizenship-prep.png
