@@ -2,9 +2,7 @@
     ESL Book Study
   date:
     Start date to be announced
-  description: |
-    Study a biography about Florence Nightingale<br />
-    <span class="font-regular">Cost: $15 (pay for the book at the church reception desk)</span>
+  description:
   graphic: assets/graphics/book-study.png
 
 - title:
@@ -13,7 +11,6 @@
     Wednesdays, 7:00 – 8:00 pm<br />
     Starting Jan 20, 2021
   description:
-    
   graphic: assets/graphics/esl-writing.png
 
 - title:
