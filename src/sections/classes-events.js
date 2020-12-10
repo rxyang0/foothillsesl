@@ -106,20 +106,14 @@ export default function ClassesEvents() {
 
   return (
     <>
-      <motion.div
-        className={`container ${styles.sectionHeading}`}
-        initial={{ y: 30 }}
-        animate={{ y: 0 }}
-        transition={{ ease: 'easeOut', duration: 0.5 }}
-      >
-        <p className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>Fall 2020</p>
+      <div className={`container ${styles.sectionHeading}`}>
         <p>
           We are currently hosting classes and events via Zoom online meetings.
           {' Please email '}
           <a href="mailto:esl@foothillsalliance.com">esl@foothillsalliance.com</a>
           {' to receive the invitation emails.'}
         </p>
-      </motion.div>
+      </div>
       <div className={styles.futureLink}>
         <Link to="future" smooth="easeInOutQuad" duration={800}>
           See Future Classes
